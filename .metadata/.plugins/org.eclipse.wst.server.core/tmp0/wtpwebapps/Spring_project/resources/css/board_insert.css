@@ -1,0 +1,268 @@
+@charset "UTF-8";
+
+@import
+	url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+* {
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+	list-style: none;
+	font-family: 'Montserrat', sans-serif;
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+	background: #f1f6ff;
+}
+
+.container {
+	margin-top: 30px;
+	border-radius: 30px;
+	/* text-align: center; */
+	background-color: #fff;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+	z-index: -1;
+}
+
+.new_h1 {
+	font-size: 26px;
+	margin-left: 50px;
+	margin-bottom: 0;
+	width: 900px;
+	padding: 15px;
+}
+
+.gray_box {
+	border-top: 3px solid #5078ef;
+	margin: 0px 0px 0px 50px;
+	width: 900px;
+	height: 50px;
+	background-color: #eee;
+}
+
+p {
+	padding-left: 20px;
+}
+
+th {
+	font-weight: normal;
+	font-size: 18px;
+}
+
+span {
+	padding: 0 3px;
+	color: #5078ef;
+}
+
+table {
+	border-collapse: separate;
+	border-spacing: 0 20px;
+}
+
+.subject {
+	width: 400px;
+	padding: 15px;
+	font-size: 16px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	box-sizing: border-box;
+	box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
+}
+
+.dropdown {
+	width: 150px;
+	padding: 15px;
+	font-size: 16px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	box-sizing: border-box;
+	box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
+}
+
+textarea {
+	width: 600px;
+	height: 300px;
+	font-size: 16px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	box-sizing: border-box;
+	box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
+}
+
+.btn_wrapper {
+	text-align: right;
+	padding-right: 50px;
+	top: 80%;
+	left: 80%;
+	transform: translate(-1%, -100%);
+}
+
+.btn {
+	text-align: center;
+	width: 100px;
+	padding: 8px;
+	margin-bottom: 3px;
+	font-size: 16px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	box-sizing: border-box;
+	background-color: #2775DF;
+	color: white;
+	cursor: pointer;
+	box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
+}
+
+.xbtn {
+	top: 80%;
+	left: 92%;
+	transform: translate(-1%, -110%);
+	position: relative;
+	float: left;
+	display: inline-block;
+}
+
+.xbtn:after {
+	content: "\00d7";
+	font-size: 35pt;
+	color: 
+	line-height: 45px;
+}
+
+h1 {
+	font-size: 60px;
+	text-align: center;
+	color: #FFF;
+}
+
+h3 {
+	font-size: 30px;
+	text-align: center;
+	color: #FFF;
+}
+
+h3 a {
+	color: #FFF;
+}
+
+a {
+	color: #FFF;
+}
+
+h1 {
+	margin-top: 100px;
+	text-align: center;
+	font-size: 60px;
+}
+
+#header {
+	margin: 0 auto;
+	text-align: center;
+	position: sticky;
+	top: 0;
+	border: 1.5px solid #ddd;
+	z-index: 1;
+}
+
+.logo {
+	color: black;
+	font-size: 25px;
+	font-weight: 700;
+	font-style: italic;
+	text-shadow: 0px 5px 16px #ddd;
+	padding: 0 10px;
+	cursor: pointer;
+}
+
+nav {
+	background-color: #fff;
+}
+
+nav ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	position: relative;
+}
+
+nav ul li {
+	display: inline-block;
+	background-color: #fff;
+}
+
+nav a {
+	display: block;
+	padding: 0 10px;
+	color: #000;
+	font-size: 20px;
+	line-height: 60px;
+	text-decoration: none;
+}
+
+nav a:hover {
+	background-color: #275EDF;
+	color: white;
+}
+
+/* Hide Dropdowns by Default */
+nav ul ul {
+	display: none;
+	position: absolute;
+	top: 60px; /* the height of the main nav */
+}
+
+/* Display Dropdowns on Hover */
+nav ul li:hover>ul {
+	display: inherit;
+}
+
+/* Fisrt Tier Dropdown */
+nav ul ul li {
+	width: 170px;
+	float: none;
+	display: list-item;
+	position: relative;
+}
+
+/* Second, Third and more Tiers	*/
+nav ul ul ul li {
+	position: relative;
+	top: -60px;
+	left: 170px;
+}
+
+/* Change this in order to change the Dropdown symbol */
+li>a:after {
+	content: ' +';
+}
+
+li>a:only-child:after {
+	content: '';
+}
+
+.header_search {
+	width: 288px;
+	height: 40px;
+	font-size: 15px;
+	border: 0;
+	border-radius: 0.6rem;
+	outline: none;
+	padding-left: 10px;
+	background-color: rgb(233, 233, 233);
+}
+
+.header_input {
+	cursor: pointer;
+	color: #000;
+	font-size: 20px;
+	background-color: #fff;
+	border-radius: 0.6rem;
+	height: 40px;
+	border: none;
+	padding: 0 10px;
+}

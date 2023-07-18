@@ -1,0 +1,95 @@
+@charset "UTF-8";
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	height: 100vh;
+	width: 100vw;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.main_text {
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.logo {
+	color: white;
+	font-size: 55px;
+}
+
+.slogan {
+	color: white;
+	font-size: 18px;
+	font-weight: 400;
+	padding-top: 5px;
+	padding-bottom: 25px;
+}
+
+h1 {
+	text-shadow: 0px 10px 36px black;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 800;
+	font-style: italic;
+}
+
+.member_btn {
+	color: white;
+	font-size: 20px;
+	padding-top: 30px;
+	padding-right: 30px;
+	float: right;
+	cursor: pointer;
+}
+
+.sign_up, .log_in {
+	all: unset;
+	color: white;
+	font-size: 20px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 500;
+	text-shadow: 3px 4px 7px rgba(99, 99, 99, 0.2);
+}
+
+.sign_up:hover, .log_in:hover {
+	animation-name: upin;
+	animation-duration: 3s;
+	animation-timing-function: linear;
+}
+
+@
+keyframes upin {
+	from {font-size: 20px;
+}
+
+to {
+	font-size: 22px;
+}
+
+}
+.start_btn {
+	position: absolute;
+	all: unset;
+	border: 3px solid #fff;
+	border-radius: 50px;
+	color: white;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 800;
+	text-shadow: 0px 10px 36px black;
+	width: 160px;
+	height: 60px;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+.start_btn:hover {
+	background-color: #fff;
+	opacity: 70%;
+	color: black;
+}

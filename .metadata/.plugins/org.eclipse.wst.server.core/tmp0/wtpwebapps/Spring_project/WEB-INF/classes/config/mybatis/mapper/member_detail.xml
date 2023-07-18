@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="md">
+
+	<select id="my_selectList" resultType="member_detail" parameterType="String">
+		select * from IT_MEMBER_DETAIL md NATURAL join it_product p
+		where my_idx = #{m_idx}
+	</select>
+
+	<select id="get_wishlist" resultType="member_detail" parameterType="java.util.Map">
+		select * from it_member_detail where m_idx = #{m_idx} and p_idx = #{p_idx}
+	</select>
+	
+	<insert id="insert_wishlist" parameterType="member_detail">
+		insert into it_member_detail values(
+			SEQ_MD_IDX.nextVal,
+			#{m_idx},
+			#{my_idx},
+			#{p_idx}
+			
+		)
+	</insert>
+	
+	<delete id="delete_wishlist" parameterType="member_detail">
+		delete from it_member_detail where m_idx = #{m_idx} and p_idx = #{p_idx}
+	</delete>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+

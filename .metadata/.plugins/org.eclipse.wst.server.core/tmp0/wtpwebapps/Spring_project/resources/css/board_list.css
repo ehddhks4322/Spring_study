@@ -1,0 +1,329 @@
+@charset "UTF-8";
+
+@import
+	url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+	list-style: none;
+	font-family: 'Montserrat', sans-serif;
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+	background: #f1f6ff;
+}
+
+.container {
+	margin-top: 30px;
+	z-index: -1;
+}
+
+.b_list {
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+	background-color: white;
+	width: 1300px;
+	height: 820px;
+	border: 1px solid #e9ecef;
+	border-radius: 15px;
+	margin: 0 auto;
+}
+
+/* 드롭다운 */
+.wrapper {
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.wrapper .search_box {
+	width: 1000px;
+	background: #fff;
+	border-radius: 5px;
+	height: 65px;
+	display: flex;
+	padding: 10px;
+	box-shadow: 0 8px 6px -10px #b3c6ff;
+}
+
+.wrapper .search_box .dropdown {
+	width: 150px;
+	color: #9fa3b1;
+	position: relative;
+	cursor: pointer;
+}
+
+.wrapper .search_box .dropdown .default_option {
+	text-transform: uppercase;
+	padding: 13px 15px;
+	font-size: 14px;
+}
+
+.wrapper .search_box .dropdown ul {
+	position: absolute;
+	top: 70px;
+	left: -10px;
+	background: #fff;
+	width: 150px;
+	border-radius: 5px;
+	padding: 20px;
+	display: none;
+	box-shadow: 8px 8px 6px -10px #b3c6ff;
+}
+
+.wrapper .search_box .dropdown ul.active {
+	display: block;
+}
+
+.wrapper .search_box .dropdown ul li {
+	padding-bottom: 20px;
+}
+
+.wrapper .search_box .dropdown ul li:last-child {
+	padding-bottom: 0;
+}
+
+.wrapper .search_box .dropdown ul li:hover {
+	color: #6f768d;
+}
+
+.wrapper .search_box .dropdown:before {
+	content: "";
+	position: absolute;
+	top: 18px;
+	right: 20px;
+	border: 8px solid;
+	border-color: #5078ef transparent transparent transparent;
+}
+
+.wrapper .search_box .search_field {
+	width: 800px;
+	height: 100%;
+	position: relative;
+}
+
+.wrapper .search_box .search_field .input {
+	width: 100%;
+	height: 100%;
+	border: 0px;
+	font-size: 16px;
+	padding-left: 20px;
+	padding-right: 38px;
+	color: #6f768d;
+	border-left: 2px solid #dde2f1;
+}
+
+.wrapper .search_box .search_field .fas {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	font-size: 22px;
+	color: #5078ef;
+	cursor: pointer;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+	color: #9fa3b1;
+}
+
+::-moz-placeholder { /* Firefox 19+ */
+	color: #9fa3b1;
+}
+
+:-ms-input-placeholder { /* IE 10+ */
+	color: #9fa3b1;
+}
+
+/* 테이블 */
+table {
+	border-collapse: collapse;
+	margin: 150px auto 0 auto;
+	padding-top: 10px;
+	border-top: 3px solid #5078ef;
+	border-bottom: 2px solid #ccc;
+	border-spacing: 0 10px;
+}
+
+table th {
+	border-bottom: 1.5px solid #ccc;
+}
+
+table td {
+	border-bottom: 1px solid #ddd;
+}
+
+table th,td {
+	padding: 10px;
+}
+
+.pageMenu {
+	padding-top: 20px;
+	text-align: center;
+}
+
+.btn_wrapper {
+	text-align: right;
+	padding-right: 100px;
+}
+
+.btn {
+	text-align: center;
+	width: 100px;
+    padding: 8px;
+    margin-bottom: 3px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    background-color: #2775DF;
+    color: white;
+    cursor: pointer;
+    box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
+}
+
+.dropdown {
+	width: 140px;
+	height: 45px;
+	font-size: 16px;
+	border: none;
+	box-sizing: border-box;
+	margin-right: 10px;
+}
+
+h1 {
+	font-size: 60px;
+	text-align: center;
+	color: #FFF;
+}
+
+h3 {
+	font-size: 30px;
+	text-align: center;
+	color: #FFF;
+}
+
+h3 a {
+	color: #FFF;
+}
+
+a {
+	color: #FFF;
+}
+
+h1 {
+	margin-top: 100px;
+	text-align: center;
+	font-size: 60px;
+}
+
+#header {
+	margin: 0 auto;
+	text-align: center;
+	position: sticky;
+	top: 0;
+	border: 1.5px solid #ddd;
+	z-index: 1;
+}
+
+.logo {
+	color: black;
+	font-size: 25px;
+	font-weight: 700;
+	font-style: italic;
+	text-shadow: 0px 5px 16px #ddd;
+	padding: 0 10px;
+	cursor: pointer;
+}
+
+nav {
+	background-color: #fff;
+}
+
+nav ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	position: relative;
+}
+
+nav ul li {
+	display: inline-block;
+	background-color: #fff;
+}
+
+nav a {
+	display: block;
+	padding: 0 10px;
+	color: #000;
+	font-size: 20px;
+	line-height: 60px;
+	text-decoration: none;
+}
+
+nav a:hover {
+	background-color: #275EDF;
+	color: white;
+}
+
+/* Hide Dropdowns by Default */
+nav ul ul {
+	display: none;
+	position: absolute;
+	top: 60px; /* the height of the main nav */
+}
+
+/* Display Dropdowns on Hover */
+nav ul li:hover>ul {
+	display: inherit;
+}
+
+/* Fisrt Tier Dropdown */
+nav ul ul li {
+	width: 170px;
+	float: none;
+	display: list-item;
+	position: relative;
+}
+
+/* Second, Third and more Tiers	*/
+nav ul ul ul li {
+	position: relative;
+	top: -60px;
+	left: 170px;
+}
+
+/* Change this in order to change the Dropdown symbol */
+li>a:after {
+	content: ' +';
+}
+
+li>a:only-child:after {
+	content: '';
+}
+
+.header_search {
+	width: 288px;
+	height: 40px;
+	font-size: 15px;
+	border: 0;
+	border-radius: 0.6rem;
+	outline: none;
+	padding-left: 10px;
+	background-color: rgb(233, 233, 233);
+}
+
+.header_input {
+	cursor: pointer;
+	color: #000;
+	font-size: 20px;
+	background-color: #fff;
+	border-radius: 0.6rem;
+	height: 40px;
+	border: none;
+	padding: 0 10px;
+}

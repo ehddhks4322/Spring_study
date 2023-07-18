@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+	<!-- 스프링에서 객체를 생성해주는 영역 -->
+	<!-- 스프링에서 객체를 bean이라고 한다. -->
+	<!-- Person p1 = new Person(); -->
+<!-- 	<bean id="p1" class="vo.PersonVO">
+		p1.setName("홍길동")
+		Setter 주입 (Setter - Injection) 
+		<property name="name" value="홍길동"/>
+		<property name="tel" value="010-1111-1111"/>
+		<property name="age" value="30"/> int여도 ""안에 적어야 오류가 안발생한다.
+	</bean>
+	
+	PersonVO p2 = new PersonVO("이길동","010-2222-2222",50);
+	생성자 주입 (constructor - Injection)
+	<bean id="p2" class="vo.PersonVO">
+		<constructor-arg value="박길동"/>
+		<constructor-arg value="010-2222-2222"/>
+		<constructor-arg value="50"/>
+	</bean> -->
+	
+	<!-- component-scan :  -->
+	<context:component-scan base-package="config"/>
+		
+</beans>

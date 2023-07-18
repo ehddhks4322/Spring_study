@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="Ex_0511_SpringMVC"/>
+<aop-project name="Ex_0522_SpringBoard"/>
+<aop-project name="Ex_0515_DB"/>
+<aop-project name="Ex_0518_SpringFileUpload"/>
+<aop-project name="Ex_0519_SpringAutowire"/>
+<aop-project name="Ex_0525_AOP"/>
+<aop-project name="Ex_0508_first"/>
+<aop-project name="Ex_0516_visit"/>
+<aop-project name="Ex_0510_SpringMVC"/>
+<aop-project name="Ex_0526_test"/>
+<aop-project name="Ex_0621_Thymeleaf"/>
+<aop-project name="Ex_0522_JsonMaker"/>
+<aop-project name="Spring_project"/>
+<aop-project name="Ex_0511_SpringParam"/>
+<aop-project name="Ex_0512_DB"/>
+</aop-reference-model>

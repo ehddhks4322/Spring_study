@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		<h1>회원 목록 출력하기</h1>
+		<table border="1">
+			<tr>
+				<th>순번</th>
+				<th>회원번호</th>
+				<th>아이디</th>
+				<th>회원명</th>
+				<th>가입일</th>
+			</tr>
+			
+			<!--  > : gt 
+				  < : lt
+				  >= : ge
+				  <= : le
+				  == : eq
+				  != : ne
+				  mod : 나머지
+			 -->
+			 
+			<tr th:each="vo : ${list}">
+				<td th:if="${vo.memNo % 2 == 0}" th:text="짝수"></td>
+				<td th:unless="${vo.memNo % 2 == 0}" th:text="홀수"></td>
+				<td th:text="${vo.memNo}"></td>
+				<td th:text="${vo.memId}"></td>
+				<td th:text="${vo.memNm}"></td>
+				<td th:text="${#temporals.format(vo.regDate, 'yyyy.MM.dd')}"></td>
+			</tr>
+		</table>
+		<hr>
+		<p>" " 안에서 산술연산이 된다.</p>
+		<p>10 + 2 = <span th:text="10 + 2"></span> </p>
+		<p>10 % 2 == 0 -> <span th:text="10 % 2 == 0"></span> </p>
+		<p>10 % 2 == 0 -> <span th:text="10 mod 2 eq 0"></span> </p>
+		<p>(10 % 2 == 0)?'짝수' : '홀수' -> <span th:text="10 % 2 == 0"></span> </p>
+	</body>
+</html>

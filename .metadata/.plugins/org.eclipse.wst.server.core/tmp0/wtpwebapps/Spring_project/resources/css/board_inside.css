@@ -1,0 +1,239 @@
+@charset "UTF-8";
+
+@import
+	url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+	list-style: none;
+	font-family: 'Montserrat', sans-serif;
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+	background: #f1f6ff;
+}
+
+.container {
+	border-radius: 20px;
+	min-width: 800px;
+	margin-top: 30px;
+	/* text-align: center; */
+	background-color: #fff;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
+	z-index: -1;
+}
+
+h4 {
+	margin: 50px auto 0 auto;
+	width: 700px;
+	padding: 15px;
+	border-top: 2px solid #5078ef;
+	border-bottom: 1.5px solid #ccc;
+}
+
+.btn_wrapper {
+	text-align: right;
+	padding-left: 5px;
+}
+
+.btn {
+	text-align: center;
+	width: 80px;
+	padding: 8px;
+	margin-bottom: 3px;
+	font-size: 16px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	box-sizing: border-box;
+	background-color: #2775DF;
+	color: white;
+	cursor: pointer;
+	box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
+}
+
+.text {
+	width: 600px;
+}
+
+.xbtn {
+	top: 90%;
+	left: 92%;
+	transform: translate(-30%, 15%);
+	position: relative;
+	float: left;
+	display: inline-block;
+}
+
+.xbtn:after {
+	content: "\00d7";
+	font-size: 30pt;
+	color: line-height: 45px;
+}
+
+.reply_btn {
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	box-sizing: border-box;
+	box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
+	padding: 5px;
+	width: 250px;
+}
+
+.reply_btn2 {
+	width: 45px;
+	padding: 4px;
+	text-align: center;
+	font-size: 13px;
+	border: none;
+	border-radius: 3px;
+	box-sizing: border-box;
+	background-color: #2775DF;
+	color: white;
+	cursor: pointer;
+	box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
+}
+
+h1 {
+	font-size: 60px;
+	text-align: center;
+	color: #FFF;
+}
+
+h3 {
+	font-size: 30px;
+	text-align: center;
+	color: #FFF;
+}
+
+h3 a {
+	color: #FFF;
+}
+
+a {
+	color: #FFF;
+}
+
+h1 {
+	margin-top: 100px;
+	text-align: center;
+	font-size: 60px;
+}
+
+#header {
+	margin: 0 auto;
+	text-align: center;
+	position: sticky;
+	top: 0;
+	border: 1.5px solid #ddd;
+	z-index: 0;
+}
+
+.logo {
+	color: black;
+	font-size: 25px;
+	font-weight: 700;
+	font-style: italic;
+	text-shadow: 0px 5px 16px #ddd;
+	padding: 0 10px;
+	cursor: pointer;
+}
+
+nav {
+	background-color: #fff;
+	z-index: 2;
+}
+
+nav ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	position: relative;
+	z-index: 3;
+}
+
+nav ul li {
+	display: inline-block;
+	background-color: #fff;
+	z-index: 4;
+}
+
+nav a {
+	display: block;
+	padding: 0 10px;
+	color: #000;
+	font-size: 20px;
+	line-height: 60px;
+	text-decoration: none;
+}
+
+nav a:hover {
+	background-color: #275EDF;
+	color: white;
+}
+
+/* Hide Dropdowns by Default */
+nav ul ul {
+	display: none;
+	position: absolute;
+	top: 60px; /* the height of the main nav */
+}
+
+/* Display Dropdowns on Hover */
+nav ul li:hover>ul {
+	display: inherit;
+}
+
+/* Fisrt Tier Dropdown */
+nav ul ul li {
+	width: 170px;
+	float: none;
+	display: list-item;
+	position: relative;
+}
+
+/* Second, Third and more Tiers	*/
+nav ul ul ul li {
+	position: relative;
+	top: -60px;
+	left: 170px;
+}
+
+/* Change this in order to change the Dropdown symbol */
+li>a:after {
+	content: ' +';
+}
+
+li>a:only-child:after {
+	content: '';
+}
+
+.header_search {
+	width: 288px;
+	height: 40px;
+	font-size: 15px;
+	border: 0;
+	border-radius: 0.6rem;
+	outline: none;
+	padding-left: 10px;
+	background-color: rgb(233, 233, 233);
+}
+
+.header_input {
+	cursor: pointer;
+	color: #000;
+	font-size: 20px;
+	background-color: #fff;
+	border-radius: 0.6rem;
+	height: 40px;
+	border: none;
+	padding: 0 10px;
+}

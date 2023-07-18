@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		<h1>Thymeleaf 링크처리 예제</h1>
+		<div>
+			<a th:href="@{https://www.naver.com}">네이버로 이동</a>
+		</div>
+		<div>
+			<a th:href="@{ex02}">ex02예제로 이동</a>
+		</div>
+		<div>
+			<a th:href="@{ex07(param1='파라미터1',param2='파라미터2')}">ex07로 이동1</a>
+		</div>
+		<div>
+			<a th:href="@{ex07?param1=파라미터1&amp;param2=파라미터2}">ex07로 이동2</a>
+		</div>
+	</body>
+</html>

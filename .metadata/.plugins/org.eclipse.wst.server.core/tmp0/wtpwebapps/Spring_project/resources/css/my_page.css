@@ -1,0 +1,236 @@
+@charset "UTF-8";
+
+@import
+	url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #fff;
+	font-size: 22px;
+	line-height: 32px;
+	word-wrap: break-word !important;
+	width: 100%;
+}
+
+h1 {
+	font-size: 60px;
+	text-align: center;
+	color: #FFF;
+}
+
+h3 {
+	font-size: 30px;
+	text-align: center;
+	color: #FFF;
+}
+
+h3 a {
+	color: #FFF;
+}
+
+a {
+	color: #FFF;
+}
+
+#header {
+	margin: 0 auto;
+	text-align: center;
+	position: sticky;
+	top: 0;
+	border: 1.5px solid #ddd;
+}
+
+.logo {
+	color: black;
+	font-size: 25px;
+	font-weight: 700;
+	font-style: italic;
+	text-shadow: 0px 5px 16px #ddd;
+	padding: 0 10px;
+	cursor: pointer;
+}
+
+nav {
+	background-color: #fff;
+}
+
+nav ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	position: relative;
+}
+
+nav ul li {
+	display: inline-block;
+	background-color: #fff;
+}
+
+nav a {
+	display: block;
+	padding: 0 10px;
+	color: #000;
+	font-size: 20px;
+	line-height: 60px;
+	text-decoration: none;
+}
+
+nav a:hover {
+	background-color: #275EDF;
+	color: white;
+}
+
+/* Hide Dropdowns by Default */
+nav ul ul {
+	display: none;
+	position: absolute;
+	top: 60px; /* the height of the main nav */
+}
+
+/* Display Dropdowns on Hover */
+nav ul li:hover>ul {
+	display: inherit;
+}
+
+/* Fisrt Tier Dropdown */
+nav ul ul li {
+	width: 170px;
+	float: none;
+	display: list-item;
+	position: relative;
+}
+
+/* Second, Third and more Tiers */
+nav ul ul ul li {
+	position: relative;
+	top: -60px;
+	left: 170px;
+}
+
+/* Change this in order to change the Dropdown symbol */
+li>a:after {
+	content: ' +';
+}
+
+li>a:only-child:after {
+	content: '';
+}
+
+.header_search {
+	width: 288px;
+	height: 40px;
+	font-size: 15px;
+	border: 0;
+	border-radius: 0.6rem;
+	outline: none;
+	padding-left: 10px;
+	background-color: rgb(233, 233, 233);
+}
+
+.header_input {
+	cursor: pointer;
+	color: #000;
+	font-size: 20px;
+	background-color: #fff;
+	border-radius: 0.6rem;
+	height: 40px;
+	border: none;
+	padding: 0 10px;
+}
+
+/* 메뉴 스타일 설정 */
+.menu {
+	display: float;
+	position: fixed;
+	width: 150px;
+	height: 200px;
+	top: 105px;
+	/* left: 0%; */
+	margin-left: 0 auto;
+	z-index: 1;
+}
+
+.menu li {
+	display: block;
+}
+
+.menu li a {
+	display: block;
+	color: #333;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+.menu li a:hover {
+	background-color: #ddd;
+}
+
+.profile {
+	position: absolute;
+	margin-top: 30px;
+	border-radius: 30px;
+	padding: 70px 70px 30px 70px;
+	background-color: #fff;
+	border: 1px solid #fff;
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: black;
+}
+
+.container .m_wrap {
+	margin-bottom: 30px;
+}
+
+.container .m_div {
+	width: 450px;
+	padding: 15px;
+	border: 1px solid #ccc;
+	border-radius: 50px;
+	box-sizing: border-box;
+	box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
+	font-size: 20px;
+}
+
+.container .m_wrap h4 {
+	font-size: 14px;
+	margin: 0;
+	padding-left: 15px;
+}
+
+.container .m_wrap span {
+	font-size: 13.5px;
+	margin: 5px 0 10px 0;
+	color: #e83d1e;
+}
+
+.container .m_div p {
+	padding-left: 15px;
+	font-size: 18px;
+	margin: 0;
+}
+
+.container p {
+	margin: 0;
+}
+
+.container h1 {
+	display: block;
+	font-size: 2em;
+	margin-block-start: 0.67em;
+	margin-block-end: 0.67em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	font-weight: bold;
+}
+
+.profile h1 {
+	color: black;
+	padding-bottom: 50px;
+}

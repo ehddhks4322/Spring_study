@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "HTTP://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<settings>
+		<setting name="cacheEnabled" value="false" />
+		<setting name="useGeneratedKeys" value="true" />
+		<setting name="defaultExecutorType" value="REUSE" />
+	</settings>
+	
+	<typeAliases>
+		 <typeAlias type="vo.IT_BoardVO" alias="board"/>
+		 <typeAlias type="vo.IT_Board_DetailVO" alias="board_detail"/>
+		 <typeAlias type="vo.IT_MemberVO" alias="member"/> 
+		 <typeAlias type="vo.IT_Member_DetailVO" alias="member_detail"/>
+		 <typeAlias type="vo.IT_ProductVO" alias="product"/>
+	</typeAliases>
+	
+	<mappers>
+		<mapper resource="config/mybatis/mapper/board.xml" />
+		<mapper resource="config/mybatis/mapper/board_detail.xml" />
+		<mapper resource="config/mybatis/mapper/member.xml" />
+		<mapper resource="config/mybatis/mapper/member_detail.xml" />
+		<mapper resource="config/mybatis/mapper/product.xml" />
+	</mappers>
+</configuration>

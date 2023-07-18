@@ -1,0 +1,195 @@
+@charset "UTF-8";
+
+@import
+	url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+body {
+	margin: 0;
+}
+
+.container {
+	position: absolute;
+	width: 500px;
+	height: 740px;
+	padding-top: 70px;
+	border-radius: 30px;
+	padding: 70px 70px 30px 70px;
+	background-color: #fff;
+	border: 1px solid #fff;
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+h1 {
+	margin-top: 0;
+}
+
+h5 {
+	font-size: 14px;
+	margin: 5px 0 10px 0;
+}
+
+span {
+	font-size: 13.5px;
+	margin: 5px 0 10px 0;
+	color: #e83d1e;
+}
+
+#m_name, #m_pw {
+	width: 500px;
+	padding: 15px;
+	margin-bottom: 10px;
+	font-size: 16px;
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	box-sizing: border-box;
+	box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
+}
+
+.id_div {
+	display: flex;
+	justify-content: space-between;
+	width: 500px;
+	margin-bottom: 10px;
+	font-size: 16px;
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	box-sizing: border-box;
+	box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
+	width: 500px;
+}
+
+#m_id {
+	font-size: 15px;
+	padding: 15px;
+	width: 400px;
+	border: none;
+	background: transparent;
+}
+
+input:hover {
+	border: none;
+}
+
+.email_div input, #m_email_3 {
+	height: 25px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
+}
+
+.add_div input {
+	width: 365px;
+	height: 30px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
+	height: 30px;
+}
+
+.add_div .add_btn {
+	width: 100px;
+	height: 30px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	background-color: #2775DF;
+	color: white;
+	cursor: pointer;
+	box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
+}
+
+.add_div .submit_button {
+	margin-top: 15px;
+	width: 500px; /* 필요에 따라 너비 조정 */
+	height: 50px; padding : 10px;
+	margin-bottom: 3px;
+	font-size: 16px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	box-sizing: border-box;
+	background-color: #2775DF;
+	color: white;
+	cursor: pointer;
+	box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
+	padding: 10px;
+}
+
+.insert_form {
+	margin-bottom: 10px;
+	align-items: center;
+}
+
+.insert_form input[type="text"], .insert_form input[type="password"],
+	.insert_form input[type="tel"] {
+	width: 500px;
+	padding: 15px;
+	font-size: 16px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+.insert_form .check_button {
+	width: 80px;
+	height: 45px;
+	margin: 3px;
+	padding: 5px;
+	font-size: 16px;
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	box-sizing: border-box;
+	background-color: #2775DF;
+	color: white;
+	cursor: pointer;
+	box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
+}
+
+#sample6_postcode {
+	margin-right: 10px;
+}
+
+#sample6_address {
+	flex: 1;
+	/* margin-left: 10px; /* 주소와 상세주소 사이 여백 조정 */
+}
+
+#sample6_detailAddress {
+	flex: 1;
+	/* margin-left: 10px; /* 상세주소와 가입하기 버튼 사이 여백 조정 */
+}
+
+#sample6_extraAddress {
+	flex: 1;
+}
+
+input[type="button"]:hover {
+	background-color: #275EDF;
+}
+
+input[type="button"]:focus {
+	outline: none;
+}
+
+input[type="button"]:active {
+	background-color: #3e8e41;
+}
+
+.xbtn {
+	top: 0%;
+	left: 103%;
+	transform: translate(-1%, -103%);
+	position: relative;
+	float: left;
+	display: inline-block;
+}
+
+.xbtn:after {
+	content: "\00d7";
+	font-size: 30pt;
+	color: line-height: 45px;
+}

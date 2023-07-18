@@ -1,0 +1,71 @@
+package mvc;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.thymeleaf.spring5.SpringTemplateEngine;
+import org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver;
+
+
+@Configuration
+@EnableWebMvc
+@ComponentScan("com.korea.fileupload")
+//어노테이션에도 상속관계가 있다
+/*
+ *@Component
+ *	ㄴ@Controller
+ *	ㄴ@Service
+ *	ㄴ@Repository 
+ * */
+//컴포넌트의 자식객체가 들어있으면 사실 Controller가 아니어도 만들어 질 수 있다.
+public class Servlet_Context implements WebMvcConfigurer {
+	
+	@Autowired
+	ApplicationContext applicationContext;
+	
+	@Override
+	public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
+		configurer.enable();
+	}
+	
+	@Override
+	public void addResourceHandlers(ResourceHandlerRegistry registry) {
+		registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
+	}
+	
+	@Bean
+	public SpringResourceTemplateResolver templateResolver() {
+		SpringResourceTemplateResolver templateResolver = new SpringResourceTemplateResolver();
+		templateResolver.setApplicationContext(applicationContext);
+		/*
+		 * templateResolver.setPrefix("/WEB-INF/views/");
+		 * templateResolver.setSuffix(".html");
+		 */
+		templateResolver.setCacheable(false);//캐시 사용 안함(사용하면 html 수정시 서버를 재기동)
+		return templateResolver;
+	}
+	
+	//타임리프의 템플릿 엔진 설정, 템플릿 파일을 읽어올 때 선언한 TemplateResolver를 사용한다.
+	@Bean
+	public SpringTemplateEngine templateEngine() {
+		SpringTemplateEngine springTemplateEngine = new SpringTemplateEngine();
+		springTemplateEngine.setTemplateResolver(templateResolver());
+		springTemplateEngine.setEnableSpringELCompiler(true);
+	}
+
+	
+//	  @Bean 
+//	  public InternalResourceViewResolver resolver() {
+//	  InternalResourceViewResolver resolver = new InternalResourceViewResolver();
+//	  resolver.setViewClass(JstlView.class); resolver.setPrefix("/WEB-INF/views/");
+//	  resolver.setSuffix(".jsp"); return resolver; }
+	
+
+	
+}

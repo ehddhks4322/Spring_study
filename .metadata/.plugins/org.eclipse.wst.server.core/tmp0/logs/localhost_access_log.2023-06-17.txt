@@ -1,0 +1,12 @@
+127.0.0.1 - - [17/Jun/2023:16:16:18 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [17/Jun/2023:16:16:44 +0900] "GET /test_member/ HTTP/1.1" 200 1152
+0:0:0:0:0:0:0:1 - - [17/Jun/2023:16:16:44 +0900] "GET /test_member/resources/css/StartScreen.css HTTP/1.1" 200 1473
+0:0:0:0:0:0:0:1 - - [17/Jun/2023:16:16:44 +0900] "GET /test_member/resources/img/main_img.png HTTP/1.1" 200 1061620
+0:0:0:0:0:0:0:1 - - [17/Jun/2023:16:16:44 +0900] "GET /favicon.ico HTTP/1.1" 404 818
+0:0:0:0:0:0:0:1 - - [17/Jun/2023:16:20:20 +0900] "GET /test_member/main.do HTTP/1.1" 200 2620
+0:0:0:0:0:0:0:1 - - [17/Jun/2023:16:20:20 +0900] "GET /test_member/resources/css/login_form.css HTTP/1.1" 200 2422
+0:0:0:0:0:0:0:1 - - [17/Jun/2023:16:20:20 +0900] "GET /test_member/resources/js/httpRequest.js HTTP/1.1" 200 1809
+0:0:0:0:0:0:0:1 - - [17/Jun/2023:16:20:20 +0900] "GET /test_member/resources/img/main_img1.png HTTP/1.1" 200 558258
+0:0:0:0:0:0:0:1 - - [17/Jun/2023:16:20:24 +0900] "GET /test_member/insert_first.do HTTP/1.1" 200 7176
+0:0:0:0:0:0:0:1 - - [17/Jun/2023:16:20:24 +0900] "GET /test_member/resources/css/insert_2.css HTTP/1.1" 200 2490
+0:0:0:0:0:0:0:1 - - [17/Jun/2023:16:20:31 +0900] "GET /test_member/start.do HTTP/1.1" 200 1152

@@ -1,0 +1,489 @@
+@charset "UTF-8";
+
+@import
+	url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #fff;
+	font-size: 22px;
+	line-height: 32px;
+	color: #ffffff;
+	word-wrap: break-word !important;
+	height: 100%;
+	width: 100%;
+}
+
+h1 {
+	font-size: 60px;
+	text-align: center;
+	color: #FFF;
+}
+
+h3 {
+	font-size: 30px;
+	text-align: center;
+	color: #FFF;
+}
+
+h3 a {
+	color: #FFF;
+}
+
+a {
+	color: #FFF;
+}
+
+h1 {
+	margin-top: 100px;
+	text-align: center;
+	font-size: 60px;
+}
+
+#header {
+	margin: 0 auto;
+	text-align: center;
+	position: sticky;
+	top: 0;
+	border: 1.5px solid #ddd;
+}
+
+.logo {
+	color: black;
+	font-size: 25px;
+	font-weight: 700;
+	font-style: italic;
+	text-shadow: 0px 5px 16px #ddd;
+	padding: 0 10px;
+	cursor: pointer;
+}
+
+nav {
+	background-color: #fff;
+}
+
+nav ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	position: relative;
+}
+
+nav ul li {
+	display: inline-block;
+	background-color: #fff;
+}
+
+nav a {
+	display: block;
+	padding: 0 10px;
+	color: #000;
+	font-size: 20px;
+	line-height: 60px;
+	text-decoration: none;
+}
+
+nav a:hover {
+	background-color: #275EDF;
+	color: white;
+}
+
+/* Hide Dropdowns by Default */
+nav ul ul {
+	display: none;
+	position: absolute;
+	top: 60px; /* the height of the main nav */
+}
+
+/* Display Dropdowns on Hover */
+nav ul li:hover>ul {
+	display: inherit;
+}
+
+/* Fisrt Tier Dropdown */
+nav ul ul li {
+	width: 170px;
+	float: none;
+	display: list-item;
+	position: relative;
+}
+
+/* Second, Third and more Tiers	*/
+nav ul ul ul li {
+	position: relative;
+	top: -60px;
+	left: 170px;
+}
+
+/* Change this in order to change the Dropdown symbol */
+li>a:after {
+	content: ' +';
+}
+
+li>a:only-child:after {
+	content: '';
+}
+
+.header_search {
+	width: 288px;
+	height: 40px;
+	font-size: 15px;
+	border: 0;
+	border-radius: 0.6rem;
+	outline: none;
+	padding-left: 10px;
+	background-color: rgb(233, 233, 233);
+}
+
+.header_input {
+	cursor: pointer;
+	color: #000;
+	font-size: 20px;
+	background-color: #fff;
+	border-radius: 0.6rem;
+	height: 40px;
+	border: none;
+	padding: 0 10px;
+}
+
+/*GRID*/
+.padding-section {
+	margin: 80px;
+	top: 50%;
+	left: 50%;
+}
+
+.app {
+	margin: 30x;
+}
+
+.grid {
+	width: 80vw;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 2000px;
+}
+
+.palettes {
+	margin: 30px;
+	display: grid;
+	grid-template-columns: 2fr 2fr 2fr 2fr;
+	grid-auto-rows: 400px;
+	grid-gap: 20px;
+	gap: 36px;
+	height: 75%;
+}
+
+.palette {
+	border-radius: 12px;
+	margin: 0;
+	overflow: hidden;
+	height: 400px;
+}
+
+.aspect-ratio {
+	overflow: hidden;
+	position: relative;
+}
+
+.see {
+	background-image: linear-gradient(135deg, rgb(244, 0, 118),
+		rgb(223, 152, 250));
+}
+
+.aspect-ratio>* {
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.palette_caption {
+	font-size: 0.875rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: black;
+	text-transform: uppercase;
+}
+
+/* footer */
+.footer-sns {
+	display: flex;
+	justify-content: center;
+	height: 100%;
+}
+
+.footer-sns li {
+	padding: 13px;
+	display: flex;
+	align-self: center;
+}
+
+.footer-sns a {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+}
+
+.footer-sns li img {
+	height: 100%;
+}
+
+footer img {
+	display: block;
+	width: 100%;
+}
+
+/* 푸터 마켓 */
+.footer-bottom {
+	background-color: #f6f6f6;
+}
+
+.flex-center {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	position: relative;
+	max-width: 1380px;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+}
+
+.footer-content {
+	padding: 45px 0 55px;
+	display: flex;
+	justify-content: space-between;
+	font-size: 13px;
+}
+
+.footerLogo a {
+	display: block;
+	width: 150px;
+	height: auto;
+}
+
+.footerLeft {
+	padding: 0 0 0 28px;
+	color: #666;
+}
+
+.comp-info {
+	padding-top: 1px;
+}
+
+.comp-info p {
+	padding-bottom: 3px;
+	font-weight: 400;
+	color: #606060;
+}
+
+.policy {
+	padding-top: 14px;
+}
+
+.policy a:first-child {
+	padding-left: 0px;
+}
+
+.policy a {
+	text-decoration: underline;
+	padding: 0 15px 0 10px;
+	position: relative;
+	cursor: pointer;
+	font-weight: 500;
+	font-size: 13px;
+	color: #606060;
+}
+
+.policy a:last-child {
+	padding-right: 0px;
+}
+
+.award-list {
+	padding: 28px 0 0 0;
+	display: flex;
+}
+
+.award-list li {
+	margin-right: 45px;
+}
+
+footer li {
+	list-style: none;
+}
+
+.award-list li a {
+	display: inline-flex;
+	align-items: center;
+	color: #919191;
+	font-size: 12px;
+	font-weight: 600;
+	letter-spacing: 0;
+}
+
+.cursor-default {
+	cursor: default;
+}
+
+.award-icon {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	margin-right: 4px;
+	object-fit: cover;
+}
+
+.award-list li:last-child {
+	margin-right: 0px;
+}
+
+.display-none {
+	display: none;
+}
+
+.award-list li a {
+	display: inline-flex;
+	align-items: center;
+	color: #919191 t;
+	font-size: 12px;
+	font-weight: 600;
+	letter-spacing: 0;
+}
+
+.award-icon {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	margin-right: 4px;
+	object-fit: cover;
+}
+
+.copyright {
+	font-size: 11px;
+	font-weight: 400;
+	padding-top: 8px;
+	color: #999;
+	letter-spacing: -.1px;
+}
+
+.footerRight {
+	margin-left: 80px;
+}
+
+.footerRight h3 {
+	font-size: 20px;
+	font-weight: 600;
+	color: #333;
+	margin-left: 2px;
+}
+
+.center-info-wrap {
+	display: flex;
+	color: #606060;
+}
+
+.footerRight h3 {
+	font-size: 20px;
+	font-weight: 600;
+	color: #333;
+	margin-left: 2px;
+}
+
+.display-none {
+	display: none;
+}
+
+.center-tell p {
+	color: #314ad7;
+	font-size: 35px;
+	font-weight: 700;
+	white-space: nowrap;
+}
+
+.center-info {
+	padding: 4px 0 0 25px;
+	font-weight: 400;
+}
+
+.mb-3, .my-3 {
+	margin-bottom: 3px;
+}
+
+.center-info-notice {
+	padding-top: 10px;
+	color: #666;
+	white-space: nowrap;
+}
+
+.alignItems-center {
+	align-items: center;
+}
+
+.flex-wrap {
+	flex-wrap: wrap;
+}
+
+.display-flex {
+	display: flex;
+}
+
+.simpleCheck {
+	color: #314ad7;
+	font-weight: 400;
+	margin-left: 3px;
+}
+
+.triangle {
+	display: inline-block;
+	width: 11px;
+	height: 11px;
+	margin-left: 3px;
+}
+
+.footer-btn {
+	padding-top: 25px;
+}
+
+.footer-btn ul li {
+	margin: 0 6px 6px 0;
+	display: inline-block;
+	text-align: center;
+	background-color: #fff;
+}
+
+.footer-btn ul li a {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	width: 125px;
+	padding: 8px 0;
+	color: #666;
+	border: 1px solid #CDCDCD;
+	background-color: #fff;
+	font-size: 15px;
+	font-weight: 300;
+}
+
+.insert_btn {
+	text-align: center;
+	width: 140px;
+	height: 50px;
+	padding: 8px;
+	margin-bottom: 3px;
+	font-size: 18px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	box-sizing: border-box;
+	background-color: #2775DF;
+	color: white;
+	cursor: pointer;
+	box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
+}

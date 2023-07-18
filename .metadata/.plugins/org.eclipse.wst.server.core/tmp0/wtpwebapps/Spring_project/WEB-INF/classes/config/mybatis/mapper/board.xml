@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="b">
+		
+		<select id="board_list" resultType="board" parameterType="java.util.Map">
+			SELECT * FROM (SELECT RANK() OVER (ORDER BY B_IDX DESC) no, b.* FROM (SELECT M.M_ID,B.* FROM IT_BOARD B,IT_MEMBER M WHERE M.M_IDX = B.M_IDX) b) WHERE no BETWEEN #{start} and #{end}
+		</select>
+		
+		<!-- 전체 게시물 수 조회 -->
+		<select id="board_count" resultType="int">
+			select count(*) from it_board
+		</select>
+		
+		<!-- 게시물 추가 -->
+		<insert id="board_insert" parameterType="board">
+			insert into it_board values(
+				SEQ_IT_BOARD_IDX.NEXTVAL,
+				#{b_head},
+				#{m_idx},
+				#{subject},
+				#{content},
+				#{ip},
+				sysdate,
+				0
+			)
+		</insert>
+		
+		<!-- 검색 게시물 조회 -->
+		<select id="search_list" resultType="board" parameterType="java.util.Map">
+			select * from (SELECT RANK() OVER (ORDER BY B_IDX DESC) no, b.* FROM (SELECT M.M_ID,B.* FROM IT_BOARD B,IT_MEMBER M WHERE M.M_IDX = B.M_IDX) b) where b_head = #{selectOption} and subject like '%'||#{text}||'%' order by no
+		</select>
+		
+		<!-- 검색 게시물 수 조회 -->
+		<select id="search_board_count" resultType="int" parameterType="java.util.Map">
+			select count(*) from it_board where b_head = #{selectOption} and subject like '%'||#{text}||'%'
+		</select>
+		
+		<select id="board_selectOne" resultType="board" parameterType="int">
+			select * from (SELECT M.M_ID,B.* FROM IT_BOARD B,IT_MEMBER M WHERE M.M_IDX = B.M_IDX) where b_idx=#{b_idx}
+		</select>
+		
+		<!-- 조회수 증가 -->
+		<update id="update_readhit" parameterType="int">
+			update it_board set readhit = readhit+1 where b_idx=#{b_idx}
+		</update>
+		
+		<!-- 게시글 삭제 -->
+		<delete id="board_delete" parameterType="int">
+			delete from it_board where b_idx=#{b_idx}
+		</delete>
+	
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>	
+		<h1>회원 목록 출력하기</h1>
+		<table border="1">
+			<tr>
+				<th>순번</th>
+				<th>회원번호</th>
+				<th>아이디</th>
+				<th>회원명</th>
+				<th>가입일</th>
+			</tr>
+			<tr th:each="vo, i : ${list}">
+			
+			</tr>
+		</table>
+	</body>
+</html>

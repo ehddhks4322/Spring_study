@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="p">
+	<select id="product_list" resultType="product">
+		select * from (SELECT
+		M.M_LOC,P.* FROM IT_PRODUCT P,IT_MEMBER M WHERE M.M_IDX = P.M_IDX)
+	</select>
+
+	<select id="product_code_list" resultType="product"
+		parameterType="int">
+		select * from (SELECT M.M_LOC,P.* FROM IT_PRODUCT
+		P,IT_MEMBER M WHERE
+		M.M_IDX = P.M_IDX) where p_code=#{p_code}
+	</select>
+
+	<select id="product_selectOne" resultType="product"
+		parameterType="String">
+		select * from (SELECT M.M_ID,P.* FROM IT_PRODUCT
+		P,IT_MEMBER M WHERE M.M_IDX = P.M_IDX) where p_idx=#{p_idx}
+	</select>
+
+	<delete id="product_delete" parameterType="String">
+		delete from it_product
+		where p_idx=#{p_idx}
+	</delete>
+
+	<update id="product_update" parameterType="product">
+		UPDATE IT_PRODUCT
+		SET
+		p_name=#{p_name},
+		p_price=#{p_price},
+		p_text=#{p_text}
+		WHERE
+		p_idx=#{p_idx}
+	</update>
+
+	<select id="my_product_list" resultType="product"
+		parameterType="String">
+		select * from it_product where m_idx = #{m_idx}
+	</select>
+
+	<insert id="product_insert" parameterType="product">
+		insert into it_product
+		values(
+		SEQ_IT_PRODUCT_IDX.nextVal,
+		#{p_name},
+		#{p_code},
+		#{p_price},
+		#{p_text},
+		#{p_img1},
+		#{p_img2},
+		#{p_img3},
+		sysdate,
+		0,
+		0,
+		#{m_idx}
+		)
+	</insert>
+
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
